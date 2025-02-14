@@ -15,9 +15,43 @@
     # You can also split up your configuration and import pieces of it here:
     #./modules/neovim/neovim.nix
 
-    ./modules/nixvim
-    ./modules/hypr
-    ./modules/firefox
+    ./modules/nixvim            # text editor
+    ./modules/hypr              # window manager
+    ./modules/firefox           # browser
+    ./modules/fzf               # fuzzy finder
+    ./modules/zsh               # shell
+    ./modules/kitty             # terminal emulator
+    ./modules/waybar            # bar
+    ./modules/gtk               # gtk theme
+   ./modules/viewnior           # image viewer
+   ./modules/zathura            # pdf viewer
+   ./modules/p10k               #
+    ./modules/rofi              # launcher
+    ./modules/swayosd           # brightness / volume wiget
+    ./modules/starship          # shell prompt
+    ./modules/script            # personal scripts
+    ./modules/obsidian          #  obsidian
+    ./modules/git               #  git
+    ./modules/cava              #  audio visualiser
+    ./modules/audacious         #  music player
+    ./modules/bat               #  better cat command
+    ./modules/btop              #  ressources monitor
+    ./modules/discord           #  discord with gruvbox
+    # ./modules/gaming            #  packages related to gaming
+    ./modules/lazygit           #  lazygit modules
+    ./modules/nemo              #  file manager
+    ./modukles/yazi             #  terminal file manager
+    ./modules/swaylock          #  lockscreen
+    ./modules/vscodium          #  vscode fork
+    ./modules/swaync            #  notification daemon
+    ./modules/waypaper          #  GUI wallpaper picker
+    ./modules/xdg-mimes         #  xdg config
+    ./modules/zen-browser       #  browser
+
+
+
+    ./packages.nix # other packages
+
    inputs.nix-colors.homeManagerModules.default
    ./features/mako.nix
    ./features/alacritty.nix
@@ -58,7 +92,7 @@
     username = "simon";
     homeDirectory = "/home/simon";
     sessionVariables = {
-      #EDITOR = "vim";
+      # EDITOR = "vim";
     };
   };
 
@@ -82,41 +116,7 @@
   ];
 
 
- programs.firefox = {
-   enable = true;
-   profiles.simon = {
 
-      search.engines = {
-        "Nix Packages" = {
-          urls = [{
-            template = "https://search.nixos.org/packages";
-            params = [
-              { name = "type"; value = "packages"; }
-              { name = "query"; value = "{searchTerms}"; }
-            ];
-          }];
-
-          icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
-          definedAliases = [ "@np" ];
-        };
-      };
-      search.force = true;
-
-
-
-
-      extensions = with inputs.firefox-addons.packages."x86_64-linux"; [
-        bitwarden
-        ublock-origin
-        sponsorblock
-        darkreader
-        #tridactyl
-        youtube-shorts-block
-        #languagetool
-      ];
-
-    };
-};
 
 
 

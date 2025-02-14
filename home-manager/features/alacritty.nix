@@ -5,7 +5,7 @@
   programs.alacritty.settings = {
     colors = with config.colorScheme.palette; {
       bright = {
-        black = "0x${base01}";
+        black = "0x${base03}";
         blue = "0x${base0D}";
         cyan = "0x${base0C}";
         green = "0x${base0B}";
@@ -19,7 +19,7 @@
         text = "0x${base06}";
       };
       normal = {
-        black = "0x${base01}";
+        black = "0x${base03}";
         blue = "0x${base0D}";
         cyan = "0x${base0C}";
         green = "0x${base0B}";

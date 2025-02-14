@@ -1,63 +1,88 @@
-{ config, pkgs, inputs,... }:
-
+# This is your home-manager configuration file
+# Use this to configure your home environment (it replaces ~/.config/nixpkgs/home.nix)
 {
-  # Home Manager needs a bit of information about you and the paths it should
-  # manage.
-  home.username = "simon";
-  home.homeDirectory = "/home/simon";
-
-
-  home.packages = with pkgs; [
-	hello
-	neovim
-	neofetch
-	fira-code
-	zola
-	vscode
-  ];
-
-  fonts.fontconfig.enable = true;
-
-
-
-  home.file = {
-  };
-
-  home.sessionVariables = {
-    EDITOR = "vim";
-  };
-
+  inputs,
+  lib,
+  config,
+  pkgs,
+  ...
+}: {
+  # You can import other home-manager modules here
   imports = [
-	inputs.nix-colors.homeManagerModules.default
-    	./features/mako.nix
-    	./features/alacritty.nix
-    	./features/special.nix
+    # If you want to use home-manager modules from other flakes (such as nix-colors):
+    # inputs.nix-colors.homeManagerModule
+
+    # You can also split up your configuration and import pieces of it here:
+    #./modules/neovim/neovim.nix
+
+    ./modules/nixvim
+   inputs.nix-colors.homeManagerModules.default
+   ./features/mako.nix
+   ./features/alacritty.nix
+   ./features/special.nix
+ 
+
   ];
 
   colorScheme = inputs.nix-colors.colorSchemes.gruvbox-dark-medium;
 
+  nixpkgs = {
+    # You can add overlays here
+    overlays = [
+      # If you want to use overlays exported from other flakes:
+      # neovim-nightly-overlay.overlays.default
 
-  nixpkgs.config.allowUnfree = true;
+      # Or define it inline, for example:
+      # (final: prev: {
+      #   hi = final.hello.overrideAttrs (oldAttrs: {
+      #     patches = [ ./change-hello-to-hi.patch ];
+      #   });
+      # })
 
-  home.stateVersion = "24.11"; # Please read the comment before changing.
-  programs.home-manager.enable = true;
 
-  programs.git = {
-	enable = true;
-	userName = "simon";
-	userEmail = "simon.belier29@gmail.com";
-	aliases = {
-		gpu = "push";
-		gco = "checkout";
-		gcm = "commit";
-		gcl = "clone";
-	};
+
+    ];
+    # Configure your nixpkgs instance
+    config = {
+      # Disable if you don't want unfree packages
+      allowUnfree = true;
+      # Workaround for https://github.com/nix-community/home-manager/issues/2942
+      allowUnfreePredicate = _: true;
+    };
   };
 
+  # TODO: Set your username
+  home = {
+    username = "simon";
+    homeDirectory = "/home/simon";
+    sessionVariables = {
+      #EDITOR = "vim";
+    };
+  };
 
-  programs.firefox = {
-    enable = true;
-    profiles.simon = {
+  # Add stuff for your user as you see fit:
+  programs.neovim.enable = true;
+  home.packages = with pkgs; [ 
+	steam 
+    neofetch
+    zola
+    vscode
+	mate.atril
+	unzip
+	typst
+	font-awesome
+    libreoffice-qt6-fresh
+    zathura
+    gcc
+    gdb 
+    valgrind
+
+  ];
+
+
+ programs.firefox = {
+   enable = true;
+   profiles.simon = {
 
       search.engines = {
         "Nix Packages" = {
@@ -85,12 +110,38 @@
         darkreader
         #tridactyl
         youtube-shorts-block
-	#languagetool
+        #languagetool
       ];
 
     };
+};
+
+
+
+
+
+
+
+  
+
+  # Enable home-manager and git
+  programs.home-manager.enable = true;
+  programs.git = {
+	enable = true;
+        userName = "simon";
+        userEmail = "simon.belier29@gmail.com";
+        aliases = {
+                pu = "push";
+                co = "checkout";
+                cm = "commit";
+                cl = "clone";
+                st = "status";
+        };
   };
 
+  # Nicely reload system units when changing configs
+  systemd.user.startServices = "sd-switch";
 
-
+  # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
+  home.stateVersion = "24.11";
 }

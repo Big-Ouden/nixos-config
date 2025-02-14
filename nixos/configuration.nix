@@ -115,7 +115,7 @@
 
   # Define vim as default EDITOR
   programs.vim.enable = true;
-  programs.vim.defaultEditor = true;
+  #programs.vim.defaultEditor = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -156,7 +156,6 @@
     home-manager
     dig
     #  wget
-
     # waybar
     (waybar.overrideAttrs (oldAttrs: {
     	mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];
@@ -168,7 +167,16 @@
     swww
     kitty
     rofi-wayland 
+    python3
+
   ];
+
+  fonts.packages = with pkgs; [ 
+    	font-awesome
+	barlow
+	
+  ];
+
 
   #XDG portal
   xdg.portal.enable = true;

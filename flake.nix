@@ -23,6 +23,25 @@
       # url = "/home/gaetan/perso/nix/nixvim/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    hypr-contrib.url = "github:hyprwm/contrib";
+    hyprpicker.url = "github:hyprwm/hyprpicker";
+
+    hyprland = {
+      type = "git";
+      url = "https://github.com/hyprwm/Hyprland";
+      submodules = true;
+    };
+    spicetify-nix = {
+      url = "github:gerg-l/spicetify-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    zen-browser.url = "github:0xc000022070/zen-browser-flake";
+
+    yazi-plugins = {
+      url = "github:yazi-rs/plugins";
+      flake = false;
+    };
 
   };
 
@@ -36,12 +55,8 @@
   in {
 
 
-    # Reusable nixos modules you might want to export
-    # These are usually stuff you would upstream into nixpkgs
-    nixosModules = import ./modules/nixos;
-    # Reusable home-manager modules you might want to export
-    # These are usually stuff you would upstream into home-manager
-    homeManagerModules = import ./modules/home-manager;
+    # nixosModules = import ./modules/nixos;
+    # homeManagerModules = import ./modules/home-manager;
 
 
 

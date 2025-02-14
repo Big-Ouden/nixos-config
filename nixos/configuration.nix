@@ -126,6 +126,8 @@
   	enable = true;
   	# nvidiaPatches = true;
   	xwayland.enable = true;
+    package = inputs.hyprland.packages.${pkgs.system}.default;
+     portalPackage = inputs.hyprland.packages.${pkgs.system}.xdg-desktop-portal-hyprland;
   };
 
   environment.sessionVariables = {
@@ -157,10 +159,10 @@
     dig
     #  wget
     # waybar
-    (waybar.overrideAttrs (oldAttrs: {
-    	mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];
-    	})
-    )
+    # (waybar.overrideAttrs (oldAttrs: {
+    # 	mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];
+    # 	})
+    # )
 
     dunst
     libnotify
@@ -181,10 +183,22 @@
 
 
   #XDG portal
-  xdg.portal.enable = true;
-  xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
-
-
+  xdg.portal = {
+    enable = true;
+    xdgOpenUsePortal = true;
+    config = {
+      common.default = [ "gtk" ];
+      hyprland.default = [
+        "gtk"
+        "hyprland"
+      ];
+    };
+    extraPortals = [
+      pkgs.xdg-desktop-portal-gtk
+      # inputs.hyprland.packages.${pkgs.system}.xdg-desktop-portal-hyprland
+      # pkgs.xdg-desktop-portal-hyprland
+    ];
+  };
 
 
 

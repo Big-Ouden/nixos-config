@@ -9,15 +9,15 @@
     keymaps =
     [
       # oil mapping for file tree
-        #{
-        #  action = ":Oil<CR>";
-        #  key = "<leader>o";
-        #  options = {
-        #    silent = true;
-        #    noremap = true;
-        #    desc = "Oil Mapping";
-        #  };
-        #}
+        {
+         action = ":Oil<CR>";
+         key = "<leader>o";
+         options = {
+           silent = true;
+           noremap = true;
+           desc = "Oil Mapping";
+         };
+        }
       # Go to definition
       {
         action = ":lua vim.lsp.buf.definition()<CR>";

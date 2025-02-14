@@ -20,8 +20,9 @@
         "tex" # inria
         "latex" # inria
         "markdown"
+        "typ"
       ];
-      command = "setlocal spell spelllang=en";
+      command = "setlocal spell spelllang=fr";
     }
   ];
 }

@@ -14,7 +14,7 @@
     ./lualine.nix
     ./markdown-preview.nix
     #./neorg.nix
-    ./neo-tree.nix
+    # ./neo-tree.nix
     #./snacks.nix # TODO remove
     #./startify.nix
     ./telescope.nix
@@ -26,11 +26,14 @@
     ./which-key.nix
     ./indent-o-matic.nix
     ./cursorline.nix
-    ./copilot-vim.nix
-    ./copilot-cmp.nix
+    # ./copilot-vim.nix
+    #./copilot-cmp.nix
     ./presence.nix
     ./csvview.nix
     ./typst-vim.nix
+    ./sniprun.nix
+    ./neoscroll.nix
+    ./wilder.nix
   ];
 
   programs.nixvim = {
@@ -65,13 +68,14 @@
       trim = {
         enable = true;
         settings = {
-          highlight = true;
+          highlight = false;
           ft_blocklist = [
             "checkhealth"
             "floaterm"
             "lspinfo"
             "neo-tree"
             "TelescopePrompt"
+            "harpoon"
           ];
         };
       };

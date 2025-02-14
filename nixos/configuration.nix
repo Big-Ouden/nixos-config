@@ -107,7 +107,7 @@
   #      users = {
   #      	"simon" = import ./home.nix;
   #      };
-  #      
+  #
   #};
 
   # Install firefox.
@@ -152,7 +152,7 @@
     git
     tailscale
     discord
-    tree 
+    tree
     home-manager
     dig
     #  wget
@@ -160,21 +160,23 @@
     (waybar.overrideAttrs (oldAttrs: {
     	mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];
     	})
-    ) 
-    
+    )
+
     dunst
     libnotify
     swww
     kitty
-    rofi-wayland 
+    rofi-wayland
     python3
 
   ];
 
-  fonts.packages = with pkgs; [ 
+  fonts.packages = with pkgs; [
     	font-awesome
-	barlow
-	
+	    barlow
+      nerd-fonts._0xproto
+      nerd-fonts.droid-sans-mono
+
   ];
 
 

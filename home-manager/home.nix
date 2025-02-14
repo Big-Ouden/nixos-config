@@ -16,11 +16,13 @@
     #./modules/neovim/neovim.nix
 
     ./modules/nixvim
+    ./modules/hypr
+    ./modules/firefox
    inputs.nix-colors.homeManagerModules.default
    ./features/mako.nix
    ./features/alacritty.nix
    ./features/special.nix
- 
+
 
   ];
 
@@ -62,19 +64,19 @@
 
   # Add stuff for your user as you see fit:
   programs.neovim.enable = true;
-  home.packages = with pkgs; [ 
-	steam 
+  home.packages = with pkgs; [
+	  steam
     neofetch
     zola
     vscode
-	mate.atril
-	unzip
-	typst
-	font-awesome
+	  mate.atril
+	  unzip
+	  typst
+	  font-awesome
     libreoffice-qt6-fresh
     zathura
     gcc
-    gdb 
+    gdb
     valgrind
 
   ];
@@ -122,7 +124,7 @@
 
 
 
-  
+
 
   # Enable home-manager and git
   programs.home-manager.enable = true;

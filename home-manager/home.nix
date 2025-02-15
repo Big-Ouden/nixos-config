@@ -99,19 +99,19 @@
   # Add stuff for your user as you see fit:
   programs.neovim.enable = true;
   home.packages = with pkgs; [
-	  steam
-    neofetch
-    zola
-    vscode
-	  mate.atril
-	  unzip
-	  typst
-	  font-awesome
-    libreoffice-qt6-fresh
-    zathura
-    gcc
-    gdb
-    valgrind
+	  # steam
+    # neofetch
+    # zola
+    # vscode
+	  # mate.atril
+	  # unzip
+	  # typst
+	  # font-awesome
+    # libreoffice-qt6-fresh
+    # zathura
+    # gcc
+    # gdb
+    # valgrind
 
   ];
 

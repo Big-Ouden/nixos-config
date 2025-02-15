@@ -58,6 +58,11 @@
     # yt-dlp-light
     xdg-utils
     # xxd
+    typst
+    mate.atril
+    font-awesome
+    zola
+
 
     ## CLI
     cbonsai                           # terminal screensaver
@@ -66,6 +71,7 @@
     sl
     tty-clock                         # cli clock
     tmux                              # terminal multiplexer
+    # neofetch
 
     ## GUI Apps
     # audacity
@@ -87,6 +93,8 @@
     # wineWowPackages.wayland
     # zenity
     obsidian
+    steam
+    baobab
 
     # C / C++
     gcc

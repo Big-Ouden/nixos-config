@@ -15,12 +15,26 @@
                 theme = "refined";
                 plugins = [
                     "git"
+
                 ];
             };
 
             enableAutosuggestions = true;
             enableCompletion = true;
             enableSyntaxHighlighting = true;
+
+            plugins = [
+                {
+                  # Must be before plugins that wrap widgets, such as zsh-autosuggestions or fast-syntax-highlighting
+                  name = "fzf-tab";
+                  src = "${pkgs.zsh-fzf-tab}/share/fzf-tab";
+                }
+                {
+                  name = "powerlevel10k";
+                  src = pkgs.zsh-powerlevel10k;
+                  file = "share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
+                }
+            ];
         };
     };
 

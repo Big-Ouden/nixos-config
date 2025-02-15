@@ -86,6 +86,7 @@
     # winetricks
     # wineWowPackages.wayland
     # zenity
+    obsidian
 
     # C / C++
     gcc

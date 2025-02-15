@@ -2,6 +2,7 @@
 
 
 |                           | NixOS     |
+| :---------: | :----------:|
 | Window manager            | Hyrland   |
 | Terminal Emulator         | Kitty     |
 | Shell                     | zsh + powerlevel10k|

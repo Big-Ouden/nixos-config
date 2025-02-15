@@ -37,11 +37,16 @@
     };
 
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
+    hyprmag.url = "github:SIMULATAN/hyprmag";
 
     yazi-plugins = {
       url = "github:yazi-rs/plugins";
       flake = false;
     };
+
+    alejandra.url = "github:kamadorueda/alejandra/3.0.0";
+
+    nix-gaming.url = "github:fufexan/nix-gaming";
 
   };
 
@@ -52,6 +57,12 @@
     ...
   } @ inputs: let
     inherit (self) outputs;
+     system = "x86_64-linux";
+      pkgs = import nixpkgs {
+        inherit system;
+        config.allowUnfree = true;
+      };
+      lib = nixpkgs.lib;
   in {
 
 
@@ -65,7 +76,7 @@
     nixosConfigurations = {
       # DONE replace with your hostname
       surtur = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs outputs;};
+        specialArgs = {inherit inputs outputs system;};
         # > Our main nixos configuration file <
         modules = [./nixos/configuration.nix];
       };
@@ -77,7 +88,7 @@
       "simon@surtur" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
 
-        extraSpecialArgs = {inherit inputs outputs;};
+        extraSpecialArgs = {inherit inputs outputs system;};
         # > Our main home-manager configuration file <
         modules = [./home-manager/home.nix];
       };

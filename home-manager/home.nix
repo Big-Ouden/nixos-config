@@ -30,7 +30,7 @@
     ./modules/swayosd           # brightness / volume wiget
     ./modules/starship          # shell prompt
     ./modules/script            # personal scripts
-    ./modules/obsidian          #  obsidian
+    # ./modules/obsidian          #  obsidian
     ./modules/git               #  git
     ./modules/cava              #  audio visualiser
     ./modules/audacious         #  music player
@@ -40,7 +40,7 @@
     # ./modules/gaming            #  packages related to gaming
     ./modules/lazygit           #  lazygit modules
     ./modules/nemo              #  file manager
-    ./modukles/yazi             #  terminal file manager
+    ./modules/yazi             #  terminal file manager
     ./modules/swaylock          #  lockscreen
     ./modules/vscodium          #  vscode fork
     ./modules/swaync            #  notification daemon
@@ -128,18 +128,18 @@
 
   # Enable home-manager and git
   programs.home-manager.enable = true;
-  programs.git = {
-	enable = true;
-        userName = "simon";
-        userEmail = "simon.belier29@gmail.com";
-        aliases = {
-                pu = "push";
-                co = "checkout";
-                cm = "commit";
-                cl = "clone";
-                st = "status";
-        };
-  };
+ #  programs.git = {
+	# enable = true;
+ #        userName = "simon";
+ #        userEmail = "simon.belier29@gmail.com";
+ #        aliases = {
+ #                pu = "push";
+ #                co = "checkout";
+ #                cm = "commit";
+ #                cl = "clone";
+ #                st = "status";
+ #        };
+ #  };
 
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";

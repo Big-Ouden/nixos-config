@@ -14,7 +14,7 @@
     # dconf-editor
     docfd                             # TUI multiline fuzzy document finder
     eza                               # ls replacement
-    z-lua
+
     # entr                              # perform action when file change
     fd                                # find replacement
     ffmpeg
@@ -63,6 +63,7 @@
     mate.atril
     font-awesome
     zola
+    zoxide
 
 
     ## CLI

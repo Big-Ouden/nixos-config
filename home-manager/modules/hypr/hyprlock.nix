@@ -32,7 +32,7 @@ in
       text = cmd[update:1000] echo "$(date +"%k:%M")"
       color = rgba(235, 219, 178, .9)
       font_size = 115
-      font_family = Maple Mono Bold
+      font_family = JetBrains Mono
       shadow_passes = 3
       position = -25
       halign = center
@@ -73,8 +73,8 @@ in
       monitor =
       text =   $USER
       color = rgba(235, 219, 178, 1)
-      font_size = 15
-      font_family = Maple Mono Bold
+      font_size = 12
+      font_family = JetBrains Mono
       position = 131
       halign = center
       valign = bottom
@@ -94,7 +94,7 @@ in
       color = rgba(235, 219, 178, .9)
       font_color = rgba(235, 219, 178, .9)
       font_size = 14
-      font_family = Maple Mono Bold
+      font_family = JetBrains Mono
       fade_on_empty = false
       placeholder_text = <i><span foreground="##fbf1c7">Enter Password</span></i>
       hide_input = false

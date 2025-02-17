@@ -25,17 +25,18 @@
         kb_options = "grp:alt_caps_toggle";
         numlock_by_default = true;
         repeat_delay = 300;
-        follow_mouse = 0;
+        follow_mouse = 1;
         float_switch_override_focus = 0;
-        mouse_refocus = 0;
+        mouse_refocus = 1;
         sensitivity = 0;
         touchpad = {
-          natural_scroll = true;
+          natural_scroll = false;
         };
       };
 
       general = {
         "$mainMod" = "SUPER";
+        # "$mainMod" = "ALT";
         layout = "dwindle";
         gaps_in = 6;
         gaps_out = 12;
@@ -299,15 +300,15 @@
         "opacity 1.0 override 1.0 override, class:(Unity)"
         "opacity 1.0 override 1.0 override, class:(zen)"
         "opacity 1.0 override 1.0 override, class:(evince)"
-        "workspace 1, class:^(zen)$"
-        "workspace 3, class:^(evince)$"
-        "workspace 4, class:^(Gimp-2.10)$"
-        "workspace 4, class:^(Aseprite)$"
-        "workspace 5, class:^(Audacious)$"
-        "workspace 5, class:^(Spotify)$"
-        "workspace 8, class:^(com.obsproject.Studio)$"
-        "workspace 10, class:^(discord)$"
-        "workspace 10, class:^(WebCord)$"
+        # "workspace 1, class:^(zen)$"
+        # "workspace 3, class:^(evince)$"
+        # "workspace 4, class:^(Gimp-2.10)$"
+        # "workspace 4, class:^(Aseprite)$"
+        # "workspace 5, class:^(Audacious)$"
+        # "workspace 5, class:^(Spotify)$"
+        # "workspace 8, class:^(com.obsproject.Studio)$"
+        # "workspace 10, class:^(discord)$"
+        # "workspace 10, class:^(WebCord)$"
         "idleinhibit focus, class:^(mpv)$"
         "idleinhibit fullscreen, class:^(firefox)$"
         "float,class:^(org.gnome.Calculator)$"

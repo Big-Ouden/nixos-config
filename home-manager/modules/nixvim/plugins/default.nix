@@ -34,6 +34,9 @@
     ./sniprun.nix
     ./neoscroll.nix
     ./wilder.nix
+   ./wakatime.nix
+    ./lazygit.nix
+    ./zen-mode.nix
   ];
 
   programs.nixvim = {
@@ -87,6 +90,10 @@
       mkdir-nvim
       img-clip-nvim
       typst-preview-nvim
+      urlview-nvim
+      url-open
+      zoxide-vim
+
 
 
     ];

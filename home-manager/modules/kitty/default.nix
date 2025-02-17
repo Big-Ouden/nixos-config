@@ -6,8 +6,8 @@
     themeFile = "gruvbox-dark-hard";
 
     font = {
-      name = "Maple Mono";
-      size =  15 ;
+      name = "JetBrains mono";
+      size =  12 ;
     };
 
     extraConfig = ''

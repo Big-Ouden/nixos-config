@@ -4,7 +4,7 @@
 
   xdg.configFile."waypaper/config.ini".text = ''
     [Settings]
-    language = en
+    language = fr
     folder = ~/Pictures/wallpapers/others
     monitors = All
     wallpaper = ~/Pictures/wallpapers/others/nixos.png

@@ -1,8 +1,8 @@
 { pkgs, ... }:
 {
-  programs.cava = {
+  programs.zoxide = {
     enable = true;
-    enableZshIntagration = true;
+    enableZshIntegration = true;
     enableBashIntegration = true;
         options = [
             "--cmd cd"

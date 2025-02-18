@@ -7,14 +7,15 @@
 () {
   emulate -L zsh -o extended_glob
 
-  unset -m '(POWERLEVEL9K_*|DEFAULT_USER)~POWERLEVEL9K_GITSTATUS_DIR'
+  # unset -m '(POWERLEVEL9K_*|DEFAULT_USER)~POWERLEVEL9K_GITSTATUS_DIR'
 
   [[ $ZSH_VERSION == (5.<1->*|<6->.*) ]] || return
 
   typeset -g POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
+    context
     dir                     # current directory
-    vcs                     # git status
-    newline                 # \n
+    # vcs                     # git status
+    # newline                 # \n
   )
 
   typeset -g POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(

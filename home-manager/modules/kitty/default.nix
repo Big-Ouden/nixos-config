@@ -18,12 +18,14 @@
     '';
 
     settings = {
+      shell = "zsh";
       confirm_os_window_close = 0;
       background_opacity = "0.66";
       scrollback_lines = 10000;
       enable_audio_bell = false;
       mouse_hide_wait = 60;
-      window_padding_width = 5;
+      window_padding_width = 1;
+      background_blur = 1;
 
       ## Tabs
       tab_title_template = "{index}";

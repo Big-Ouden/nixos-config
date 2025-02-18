@@ -19,9 +19,9 @@
                 ];
             };
 
-            enableAutosuggestions = true;
-            enableCompletion = true;
-            enableSyntaxHighlighting = true;
+            autosuggestion.enable = true;
+            enableCompletion= true;
+            syntaxHighlighting.enable = true;
 
             plugins = [
                 {

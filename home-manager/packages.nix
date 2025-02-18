@@ -64,6 +64,7 @@
     font-awesome
     zola
     zoxide
+    wakatime-cli
 
 
     ## CLI

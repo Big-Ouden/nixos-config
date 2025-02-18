@@ -73,7 +73,7 @@
     pipes                             # terminal screensaver
     sl
     tty-clock                         # cli clock
-    tmux                              # terminal multiplexer
+    # tmux                              # terminal multiplexer
     # neofetch
 
     ## GUI Apps

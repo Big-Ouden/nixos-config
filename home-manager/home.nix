@@ -47,6 +47,7 @@
     ./modules/waypaper          #  GUI wallpaper picker
     ./modules/xdg-mimes         #  xdg config
     ./modules/zen-browser       #  browser
+   ./modules/tmux               # terminal multiplexer
 
 
 

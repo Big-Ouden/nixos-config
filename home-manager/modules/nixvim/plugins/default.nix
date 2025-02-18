@@ -37,6 +37,7 @@
    ./wakatime.nix
     ./lazygit.nix
     ./zen-mode.nix
+   ./tmux-navigator.nix
   ];
 
   programs.nixvim = {

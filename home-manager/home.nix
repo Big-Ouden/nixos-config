@@ -48,6 +48,7 @@
     ./modules/xdg-mimes         #  xdg config
     ./modules/zen-browser       #  browser
    ./modules/tmux               # terminal multiplexer
+   ./modules/zoxide             # better cd command
 
 
 

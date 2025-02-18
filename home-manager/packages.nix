@@ -63,7 +63,7 @@
     mate.atril
     font-awesome
     zola
-    zoxide
+    # zoxide
     wakatime-cli
 
 

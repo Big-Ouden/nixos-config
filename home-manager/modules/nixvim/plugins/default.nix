@@ -11,7 +11,7 @@
     ./floaterm.nix
     ./harpoon.nix
     ./lsp.nix
-    ./lualine.nix
+    ./lualine
     ./markdown-preview.nix
     #./neorg.nix
     # ./neo-tree.nix

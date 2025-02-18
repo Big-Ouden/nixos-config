@@ -20,8 +20,8 @@
         lualine_a = [ "mode" ];
         lualine_b = [ "branch" ];
         lualine_c = [
-          # "filename"
-          # "diff"
+          "filename"
+          "diff"
         ];
 
         lualine_x = [
@@ -52,10 +52,11 @@
           # "encoding"
           # "fileformat"
           # "filetype"
+          "progress"
         ];
-       lualine_z = [
-          # "location"
-        ];
+       # lualine_z = [
+       #    "location"
+       #  ];
       };
     };
   };

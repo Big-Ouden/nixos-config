@@ -25,7 +25,7 @@
     ./modules/gtk               # gtk theme
    ./modules/viewnior           # image viewer
    ./modules/zathura            # pdf viewer
-   ./modules/p10k               #
+   # ./modules/p10k               #
     ./modules/rofi              # launcher
     ./modules/swayosd           # brightness / volume wiget
     ./modules/starship          # shell prompt

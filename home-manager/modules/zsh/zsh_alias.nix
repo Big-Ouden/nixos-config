@@ -24,7 +24,7 @@
 
 
       l = "eza --icons  -a --group-directories-first "; # EZA_ICON_SPACING=2
-      ls = "eza --icons  -a --group-directories-first "; # EZA_ICON_SPACING=2
+      ls = "eza --icons   --group-directories-first "; # EZA_ICON_SPACING=2
       ll = "eza --icons  -a --group-directories-first  --no-user --long";
       tree = "eza --icons --tree --group-directories-first";
 

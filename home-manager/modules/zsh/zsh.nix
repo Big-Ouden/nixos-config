@@ -4,7 +4,7 @@
         enable = true;
         autosuggestion.enable = true;
         syntaxHighlighting.enable = true;
-        # promptInit = "source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
+
 
 
         oh-my-zsh = {
@@ -24,10 +24,10 @@
                 # "you-should-use"
 
             ];
-            # theme = "powerlevel10k";
+            theme = "";
         };
-        initExtra =''
-            source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
-        '';
+        # initExtra =''
+        #     source ~/.p10k.zsh
+        # '';
     };
 }

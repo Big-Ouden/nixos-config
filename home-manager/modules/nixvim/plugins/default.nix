@@ -38,6 +38,7 @@
     ./lazygit.nix
     ./zen-mode.nix
    ./tmux-navigator.nix
+   ./transparent.nix
   ];
 
   programs.nixvim = {

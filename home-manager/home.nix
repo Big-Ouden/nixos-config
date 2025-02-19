@@ -25,10 +25,8 @@
     ./modules/gtk               # gtk theme
    ./modules/viewnior           # image viewer
    ./modules/zathura            # pdf viewer
-   # ./modules/p10k               #
     ./modules/rofi              # launcher
     ./modules/swayosd           # brightness / volume wiget
-    ./modules/starship          # shell prompt
     ./modules/script            # personal scripts
     # ./modules/obsidian          #  obsidian
     ./modules/git               #  git
@@ -101,47 +99,11 @@
   # Add stuff for your user as you see fit:
   programs.neovim.enable = true;
   home.packages = with pkgs; [
-	  # steam
-    # neofetch
-    # zola
-    # vscode
-	  # mate.atril
-	  # unzip
-	  # typst
-	  # font-awesome
-    # libreoffice-qt6-fresh
-    # zathura
-    # gcc
-    # gdb
-    # valgrind
 
   ];
-
-
-
-
-
-
-
-
-
-
-
-
   # Enable home-manager and git
   programs.home-manager.enable = true;
- #  programs.git = {
-	# enable = true;
- #        userName = "simon";
- #        userEmail = "simon.belier29@gmail.com";
- #        aliases = {
- #                pu = "push";
- #                co = "checkout";
- #                cm = "commit";
- #                cl = "clone";
- #                st = "status";
- #        };
- #  };
+
 
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";

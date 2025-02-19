@@ -19,40 +19,40 @@
            desc = "Oil Mapping";
          };
         }
-      # Go to definition
-      {
-        action = ":lua vim.lsp.buf.definition()<CR>";
-        key = "<leader>gd";
-        options = {
-          silent = true;
-          noremap = true;
-          desc = "Go to definition";
-        };
-      }
-      # Go to references
-      {
-        action = ":lua vim.lsp.buf.references()<CR>";
-        key = "<leader>gr";
-        options = {
-          silent = true;
-          noremap = true;
-          desc = "Go to references";
-        };
-      }
-      # git blame open URL
-      {
-        action = ":GitBlameOpenCommitURL<CR>";
-        key = "<leader>gb";
-        options = {
-          silent = true;
-          noremap = true;
-          desc = "Open git blame URL";
-        };
-      }
+      # # Go to definition
+      # {
+      #   action = ":lua vim.lsp.buf.definition()<CR>";
+      #   key = "<leader>gd";
+      #   options = {
+      #     silent = true;
+      #     noremap = true;
+      #     desc = "Go to definition";
+      #   };
+      # }
+      # # Go to references
+      # {
+      #   action = ":lua vim.lsp.buf.references()<CR>";
+      #   key = "<leader>gr";
+      #   options = {
+      #     silent = true;
+      #     noremap = true;
+      #     desc = "Go to references";
+      #   };
+      # }
+      # # git blame open URL
+      # {
+      #   action = ":GitBlameOpenCommitURL<CR>";
+      #   key = "<leader>gb";
+      #   options = {
+      #     silent = true;
+      #     noremap = true;
+      #     desc = "Open git blame URL";
+      #   };
+      # }
       # lazy git dashboard
         {
          action = ":LazyGit<CR>";
-         key = "<leader>lg";
+         key = "<leader>g";
          options = {
            silent = true;
            noremap = true;
@@ -62,7 +62,7 @@
       # markdown preview mapping
       {
         action = ":MarkdownPreview<CR>";
-        key = "<leader>pm";
+        key = "<leader>m";
         options = {
           silent = true;
           noremap = true;
@@ -142,7 +142,7 @@
       # Telescope quickfixlist
       {
         action = ":Telescope quickfix<CR>";
-        key = "<leader>ql";
+        key = "<leader>q";
         options = {
           silent = true;
           noremap = true;
@@ -159,26 +159,26 @@
           desc = "Undo tree";
         };
       }
-      # Diffview open comparing in git
-        {
-         action = ":DiffviewOpen<CR>";
-         key = "<leader>do";
-         options = {
-           silent = true;
-           noremap = true;
-           desc = "Diffview open";
-         };
-        }
-        # Diffview close comparing in git
-        {
-         action = ":DiffviewClose<CR>";
-         key = "<leader>dp";
-         options = {
-           silent = true;
-           noremap = true;
-           desc = "Diffview close";
-         };
-        }
+      # # Diffview open comparing in git
+      #   {
+      #    action = ":DiffviewOpen<CR>";
+      #    key = "<leader>do";
+      #    options = {
+      #      silent = true;
+      #      noremap = true;
+      #      desc = "Diffview open";
+      #    };
+      #   }
+      #   # Diffview close comparing in git
+      #   {
+      #    action = ":DiffviewClose<CR>";
+      #    key = "<leader>dp";
+      #    options = {
+      #      silent = true;
+      #      noremap = true;
+      #      desc = "Diffview close";
+      #    };
+      #   }
       # Mapping q for recording macros
       {
         action = "q";
@@ -228,7 +228,7 @@
         action = "<Nop>";
         options = {
           silent = true;
-          desc = "disable the spacebar key's default behaviour in normal and visual modes";
+          # desc = "disable the spacebar key's default behaviour in normal and visual modes";
         };
       }
       # save file in normal mode
@@ -295,8 +295,8 @@
       # Split windows horizontally
       {
         mode = [ "n"] ;
-        key = "<leader>s";
-        action = "<C-W>v";
+        key = "<leader>h";
+        action = "<C-W>s";
         options = {
           silent = true;
           noremap = true;
@@ -307,7 +307,7 @@
       # Make split windows equal width & height
       {
         mode = ["n"] ;
-        key = "<leader>se";
+        key = "<leader>=";
         action = "<C-W>=";
         options = {
           silent = true;
@@ -319,7 +319,7 @@
       # Close current split windows 
       {
         mode = ["n"] ;
-        key = "<leader>xs";
+        key = "<leader>x";
         action = ":close<CR>";
         options = {
           silent = true;

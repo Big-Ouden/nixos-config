@@ -1,10 +1,12 @@
 { pkgs, inputs, lib,...}:
 {
   imports = [
+    ./variables.nix
     inputs.hyprland.homeManagerModules.default
+    
   ];
-  home.file = {
-    lib.mkMerge [
+  home.file = 
+    lib.mkMerge  [
       {
         ".config/hypr/hyprland.conf".source=./hyprland.conf;
         ".config/hypr/keybinds.conf".source=./keybinds.conf;
@@ -14,5 +16,5 @@
         ".config/hypr/colors.conf".source=./colors.conf;
       }
     ];
-  };
+  
 }

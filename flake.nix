@@ -57,23 +57,48 @@
     ...
   } @ inputs: let
     inherit (self) outputs;
-     system = "x86_64-linux";
+      system = "x86_64-linux";
       pkgs = import nixpkgs {
         inherit system;
         config.allowUnfree = true;
       };
       lib = nixpkgs.lib;
+      username = "simon";
+      hostname = "surtur"
   in {
-
-
-    # nixosModules = import ./modules/nixos;
-    # homeManagerModules = import ./modules/home-manager;
-
-
 
     # NixOS configuration entrypoint
     # Available through 'nixos-rebuild --flake .#your-hostname'
     nixosConfigurations = {
+        desktop = nixpkgs.lib.nixosSystem {
+          inherit system;
+          modules = [ ./hosts/desktop ];
+          specialArgs = {
+            host = "desktop";
+            inherit self inputs username;
+          };
+        };
+        laptop = nixpkgs.lib.nixosSystem {
+          inherit system;
+          modules = [ ./hosts/laptop ];
+          specialArgs = {
+            host = "laptop";
+            inherit self inputs username;
+          };
+        };
+        vm = nixpkgs.lib.nixosSystem {
+          inherit system;
+          modules = [ ./hosts/vm ];
+          specialArgs = {
+            host = "vm";
+            inherit self inputs username;
+          };
+        };
+
+
+
+
+
       # DONE replace with your hostname
       surtur = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs system;};

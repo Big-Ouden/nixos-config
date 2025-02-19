@@ -6,6 +6,7 @@ let
   };
 in
 {
+  home.sessionVariables.GTK_THEME = "gruvbox-gtk-theme";
   fonts.fontconfig.enable = true;
   home.packages = with pkgs; [
     nerd-fonts.jetbrains-mono
@@ -27,20 +28,12 @@ in
       size = 12;
     };
     theme = {
-      name = "Colloid-Green-Dark-Gruvbox";
-      package = pkgs.colloid-gtk-theme.override {
-        colorVariants = [ "dark" ];
-        themeVariants = [ "green" ];
-        tweaks = [
-          "gruvbox"
-          "rimless"
-          "float"
-        ];
-      };
+      name = "gruvbox-gtk-theme ";
+      package = pkgs.gruvbox-gtk-theme;
     };
     iconTheme = {
-      name = "Papirus-Dark";
-      package = pkgs.papirus-icon-theme.override { color = "black"; };
+      name = "gruvbox-dark-icons-gtk";
+      package = pkgs.gruvbox-dark-icons-gtk;
     };
     cursorTheme = {
       name = "Bibata-Modern-Ice";

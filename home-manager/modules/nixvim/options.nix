@@ -10,7 +10,6 @@
     clipboard = {
       # Use system clipboard
       register = "unnamedplus";
-
       providers.wl-copy.enable = true;
     };
 
@@ -32,10 +31,8 @@
       undofile = true; # Automatically save and restore undo history
       incsearch = true; # Incremental search: show match for partly typed search command
       inccommand = "split"; # Search and replace: preview changes in quickfix list
-      ignorecase = true; # When the search query is lower-case, match both lower and upper-case
-      #   patterns
-      smartcase = true; # Override the 'ignorecase' option if the search pattern contains upper
-      #   case characters
+      ignorecase = true; # When the search query is lower-case, match both lower and upper-case patterns
+      smartcase = true; # Override the 'ignorecase' option if the search pattern contains upper case characters
       scrolloff = 8; # Number of screen lines to show around the cursor
       cursorline = false; # Highlight the screen line of the cursor
       cursorcolumn = false; # Highlight the screen column of the cursor
@@ -45,6 +42,7 @@
       termguicolors = true; # Enables 24-bit RGB color in the |TUI|
       spell = false; # Highlight spelling mistakes (local to window)
       wrap = false; # Prevent text from wrapping
+      whichwrap = "bs<>[]hl"; # Which "horizontal" keys are allowed to travel to prev/next line (default: 'b,s')
 
       # Tab options
       tabstop = 4; # Number of spaces a <Tab> in the text stands for (local to buffer)

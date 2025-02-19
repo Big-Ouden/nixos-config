@@ -5,6 +5,7 @@
       maplocalleader = " ";
     };
 
+
     # Keymaps
     keymaps =
     [
@@ -49,15 +50,15 @@
         };
       }
       # lazy git dashboard
-        #{
-        #  action = ":LazyGit<CR>";
-        #  key = "<leader>lg";
-        #  options = {
-        #    silent = true;
-        #    noremap = true;
-        #    desc = "Open lazygit";
-        #  };
-        #}
+        {
+         action = ":LazyGit<CR>";
+         key = "<leader>lg";
+         options = {
+           silent = true;
+           noremap = true;
+           desc = "Open lazygit";
+         };
+        }
       # markdown preview mapping
       {
         action = ":MarkdownPreview<CR>";
@@ -159,25 +160,25 @@
         };
       }
       # Diffview open comparing in git
-        #{
-        #  action = ":DiffviewOpen<CR>";
-        #  key = "<leader>do";
-        #  options = {
-        #    silent = true;
-        #    noremap = true;
-        #    desc = "Diffview open";
-        #  };
-        #}
-        ## Diffview close comparing in git
-        #{
-        #  action = ":DiffviewClose<CR>";
-        #  key = "<leader>dp";
-        #  options = {
-        #    silent = true;
-        #    noremap = true;
-        #    desc = "Diffview close";
-        #  };
-        #}
+        {
+         action = ":DiffviewOpen<CR>";
+         key = "<leader>do";
+         options = {
+           silent = true;
+           noremap = true;
+           desc = "Diffview open";
+         };
+        }
+        # Diffview close comparing in git
+        {
+         action = ":DiffviewClose<CR>";
+         key = "<leader>dp";
+         options = {
+           silent = true;
+           noremap = true;
+           desc = "Diffview close";
+         };
+        }
       # Mapping q for recording macros
       {
         action = "q";
@@ -218,6 +219,234 @@
           desc = "Prev buffer";
         };
       }
+
+
+      # disable the spacebar key's default behaviour in normal and visual modes
+      {
+        mode = [ "n" "v"] ;
+        key = "<Space>";
+        action = "<Nop>";
+        options = {
+          silent = true;
+          desc = "disable the spacebar key's default behaviour in normal and visual modes";
+        };
+      }
+      # save file in normal mode
+      {
+        mode = "n";
+        key = "<C-s>";
+        action = "<cmd> w <CR>";
+        options = {
+          silent = true;
+          noremap = true;
+          desc = "Save file";
+        };
+      }
+
+      # Quit file 
+      {
+        mode = [ "n"] ;
+        key = "<C-q>";
+        action = "'<cmd> q <CR>";
+        options = {
+          silent = true;
+          noremap = true;
+          desc = "Quit file ";
+        };
+      }
+      
+      #  Delete single character without copying into register
+      {
+        mode = [ "n"] ;
+        key = "x";
+        action = ''"_x'';
+        options = {
+          silent = true;
+          noremap = true;
+          desc = "Delete single character without copying into register";
+        };
+      }
+      
+      #  Toggle line wrapping
+      {
+        mode = [ "n" ] ;
+        key = "'<leader>lw";
+        action = "<cmd>set wrap!<CR>";
+        options = {
+          silent = true;
+          noremap = true;
+          desc = " Toggle line wrapping";
+        };
+      }
+
+
+      # Split windows vertically
+      {
+        mode = [ "n"] ;
+        key = "<leader>v";
+        action = "<C-W>v";
+        options = {
+          silent = true;
+          noremap = true;
+          desc = "Split windows vertically";
+        };
+      }
+
+      # Split windows horizontally
+      {
+        mode = [ "n"] ;
+        key = "<leader>s";
+        action = "<C-W>v";
+        options = {
+          silent = true;
+          noremap = true;
+          desc = "Split windows horizontally";
+        };
+      }
+
+      # Make split windows equal width & height
+      {
+        mode = ["n"] ;
+        key = "<leader>se";
+        action = "<C-W>=";
+        options = {
+          silent = true;
+          noremap = true;
+          desc = "Make split windows equal width & height";
+        };
+      }
+
+      # Close current split windows 
+      {
+        mode = ["n"] ;
+        key = "<leader>xs";
+        action = ":close<CR>";
+        options = {
+          silent = true;
+          noremap = true;
+          desc = "Close current split windows s";
+        };
+      }
+      
+
+      
+      
+      #  Navigate between split - k
+      {
+        mode = [ "n"] ;
+        key = "<C-k>";
+        action = ":wincmd k<CR>";
+        options = {
+          silent = true;
+          noremap = true;
+          desc = "Navigate between split - k";
+        };
+      }
+
+
+       #  Navigate between split - j
+      {
+        mode = [ "n"] ;
+        key = "<C-j>";
+        action = ":wincmd j<CR>";
+        options = {
+          silent = true;
+          noremap = true;
+          desc = "Navigate between split - j";
+        };
+      }
+
+       #  Navigate between split - l
+      {
+        mode = [ "n"] ;
+        key = "<C-l>";
+        action = ":wincmd l<CR>";
+        options = {
+          silent = true;
+          noremap = true;
+          desc = "Navigate between split - l";
+        };
+      }
+
+       #  Navigate between split - h
+      {
+        mode = [ "n"] ;
+        key = "<C-k>";
+        action = ":wincmd h<CR>";
+        options = {
+          silent = true;
+          noremap = true;
+          desc = "Navigate between split - h";
+        };
+      }
+
+      # Open new tab
+      {
+        mode = [ "n" ] ;
+        key = "<leader>to";
+        action = ":tabnew<CR>";
+        options = {
+          silent = true;
+          noremap = true;
+          desc = "Open new tab";
+        };
+      }
+
+      # Close current tab
+      {
+        mode = [ "n" ] ;
+        key = "<leader>tx";
+        action = ":tabclose<CR>";
+        options = {
+          silent = true;
+          noremap = true;
+          desc = "Close current tab";
+        };
+      }
+
+      # Go to the next tab
+      {
+        mode = [ "n" ] ;
+        key = "<leader>tn";
+        action = ":tabn<CR>";
+        options = {
+          silent = true;
+          noremap = true;
+          desc = "Go to the next tab";
+        };
+      }
+
+      # Go to the previous tab
+      {
+        mode = [ "n" ] ;
+        key = "<leader>tp";
+        action = ":tabp<CR>";
+        options = {
+          silent = true;
+          noremap = true;
+          desc = "Go to the previous tab";
+        };
+      }
+
+      
+
+
+
+
+
+      # # keymap explained
+      # {
+      #   mode = [ "n" "v"] ;
+      #   key = "";
+      #   action = "";
+      #   options = {
+      #     silent = true;
+      #     noremap = true;
+      #     desc = "";
+      #   };
+      # }
+
+
     ];
   };
 }

@@ -11,10 +11,6 @@
     nix-ld.enable = true;
     nix-ld.libraries = with pkgs; [ ];
     git.enable = true;
-    tailscale.enable = true;
-    tree.enable = true;
-    dig.enable = true;
-    python3.enable  = true;
 
   };
   environment.systemPackages = with pkgs; [
@@ -22,6 +18,11 @@
     brightnessctl
     cpupower-gui
     powertop
+    dig
+    python3
+    tailscale
+    tree
+    home-manager
   ];
 
 

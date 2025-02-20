@@ -4,8 +4,8 @@
   ...
 }:
 {
-  import = [
-    ../hardware-configuration.nix
+  imports = [
+    ./hardware-configuration.nix
     ../../modules/core
   ];
 }

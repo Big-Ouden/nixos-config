@@ -5,6 +5,10 @@
     # Nixpkgs
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
+    # NUR repos
+    nur.url = "github:nix-community/NUR";
+
+
     # Home manager
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
@@ -16,13 +20,17 @@
           inputs.nixpkgs.follows = "nixpkgs";
         };
 
+    # nix-colors
     nix-colors.url = "github:misterio77/nix-colors";
 
+    #nixvim
     nixvim = {
       url = "github:nix-community/nixvim";
       # url = "/home/gaetan/perso/nix/nixvim/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    #hyprland
     hypr-contrib.url = "github:hyprwm/contrib";
     hyprpicker.url = "github:hyprwm/hyprpicker";
 
@@ -31,22 +39,28 @@
       url = "https://github.com/hyprwm/Hyprland";
       submodules = true;
     };
-    spicetify-nix = {
-      url = "github:gerg-l/spicetify-nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
 
+    #zen-browser
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
+
+    #hyprmag
     hyprmag.url = "github:SIMULATAN/hyprmag";
 
+    #yazi plugins : tui file manager
     yazi-plugins = {
       url = "github:yazi-rs/plugins";
       flake = false;
     };
 
+
+    # alejandra : The Uncompromising Nix Code Formatter
     alejandra.url = "github:kamadorueda/alejandra/3.0.0";
 
+    # nix gaming
     nix-gaming.url = "github:fufexan/nix-gaming";
+
+    #flatpak
+    nix-flatpak.url = "github:gmodena/nix-flatpak";
 
   };
 
@@ -64,7 +78,7 @@
       };
       lib = nixpkgs.lib;
       username = "simon";
-      hostname = "surtur"
+      hostname = "surtur";
   in {
 
     # NixOS configuration entrypoint
@@ -72,7 +86,10 @@
     nixosConfigurations = {
         desktop = nixpkgs.lib.nixosSystem {
           inherit system;
-          modules = [ ./hosts/desktop ];
+          modules = [ 
+            ./hosts/desktop
+            
+            ];
           specialArgs = {
             host = "desktop";
             inherit self inputs username;
@@ -80,7 +97,11 @@
         };
         laptop = nixpkgs.lib.nixosSystem {
           inherit system;
-          modules = [ ./hosts/laptop ];
+          modules = [ 
+            
+            ./hosts/laptop 
+            
+            ];
           specialArgs = {
             host = "laptop";
             inherit self inputs username;
@@ -88,7 +109,10 @@
         };
         vm = nixpkgs.lib.nixosSystem {
           inherit system;
-          modules = [ ./hosts/vm ];
+          modules = [ 
+            ./hosts/vm 
+            
+            ];
           specialArgs = {
             host = "vm";
             inherit self inputs username;
@@ -100,23 +124,23 @@
 
 
       # DONE replace with your hostname
-      surtur = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs outputs system;};
-        # > Our main nixos configuration file <
-        modules = [./nixos/configuration.nix];
-      };
+      # surtur = nixpkgs.lib.nixosSystem {
+      #   specialArgs = {inherit inputs outputs system;};
+      #   # > Our main nixos configuration file <
+      #   modules = [./nixos/configuration.nix];
+      # };
     };
 
     # Standalone home-manager configuration entrypoint
     # Available through 'home-manager --flake .#your-username@your-hostname'
-    homeConfigurations = {
-      "simon@surtur" = home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
+    # homeConfigurations = {
+    #   "simon@surtur" = home-manager.lib.homeManagerConfiguration {
+    #     pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
 
-        extraSpecialArgs = {inherit inputs outputs system;};
-        # > Our main home-manager configuration file <
-        modules = [./home-manager/home.nix];
-      };
-    };
+    #     extraSpecialArgs = {inherit inputs outputs system;};
+    #     # > Our main home-manager configuration file <
+    #     modules = [./home-manager/home.nix];
+    #   };
+    # };
   };
 }

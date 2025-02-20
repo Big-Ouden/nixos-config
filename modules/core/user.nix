@@ -14,15 +14,14 @@
     users.${username} = {
       imports =
         if (host == "desktop") then
-          [ ./../home/default.desktop.nix ]
+          [ ./../../home-manager/desktop ]
         else
-          [ ./../home ];
+          [ ./../../home-manager/laptop/home.nix ];
       home.username = "${username}";
       home.homeDirectory = "/home/${username}";
       home.stateVersion = "24.11";
       programs.home-manager.enable = true;
     }; 
-    # TODO : remove home-manager config in home.nix
   };
 
   users.users.${username} = {

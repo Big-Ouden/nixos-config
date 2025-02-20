@@ -7,7 +7,7 @@
   ...
 }:
 {
-  import = [
+  imports = [
 
     # Include bootloader config
     ./bootloader.nix
@@ -37,6 +37,7 @@
     ./user.nix
     # Include wayland config
     ./wayland.nix
+    # Include garbage collecting config
 
 
 

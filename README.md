@@ -76,8 +76,10 @@ cd nixos-config
 ```
 
 ---
-
+<details>
+<summary>
 ## 🔧 **Building & Deploying the Configuration**
+</summary>
 ### **1️⃣ Applying the NixOS System Configuration (Host)**
 To rebuild your **entire system (host)**, replacing `laptop` with `desktop` or `vm` as needed:
 
@@ -107,9 +109,13 @@ home-manager switch --flake .#simon@laptop
 ⚠ **System (`nixos-rebuild`) and user (`home-manager switch`) configurations are independent!**  
 Changes to one **do not** affect the other.
 
+</details>
 ---
 
+<details>
+<summary>
 ## 🔧 **Automatic Installation Script**
+</summary>
 Instead of manually running the above commands, you can use the **provided installation script**:
 
 ```sh
@@ -126,7 +132,7 @@ For example, to install on a **laptop** for user **simon**:
 This script:
 ✔️ **Applies the system configuration (`nixos-rebuild`)**  
 ✔️ **Applies the user configuration (`home-manager switch`)**  
-
+</details>
 ---
 
 ## 📦 **Applications & Services**

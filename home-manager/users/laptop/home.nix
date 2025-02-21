@@ -5,6 +5,7 @@
   lib,
   config,
   pkgs,
+  username,
   ...
 }: {
   imports = [
@@ -15,10 +16,10 @@
     #./modules/neovim/neovim.nix
 
 
-    ../profiles/base.nix
-    ../profiles/dev.nix
-    ../profiles/misc.nix
-    ../profiles/rice.nix
+    ../../profiles/base.nix
+    ../../profiles/dev.nix
+    ../../profiles/misc.nix
+    ../../profiles/rice.nix
     ./packages.nix # other packages just for this config
 
    inputs.nix-colors.homeManagerModules.default
@@ -57,12 +58,12 @@
   # };
 
   # TODO: Set your username
-  # home = {
-  #   username = "simon";
-  #   homeDirectory = "/home/simon";
-  #   sessionVariables = {
-  #   };
-# };
+  home = {
+    username = "${username}";
+    homeDirectory = "/home/${username}";
+    # sessionVariables = {
+    # };
+};
 
   # Add stuff for your user as you see fit:
   # programs.neovim.enable = true;
@@ -70,7 +71,7 @@
 
   # ];
   # Enable home-manager and git
-  # programs.home-manager.enable = true;
+  programs.home-manager.enable = true;
 
 
   # Nicely reload system units when changing configs

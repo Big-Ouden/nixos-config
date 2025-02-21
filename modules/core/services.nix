@@ -25,6 +25,9 @@
     # Enable CUPS to print documents.
     printing.enable = true;
 
+    pulseaudio.enable = false;
+
+
 
     power-profiles-daemon.enable = true;
 

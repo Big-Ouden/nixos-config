@@ -3,8 +3,8 @@
 {
   imports = [
     # ../modules/programs/zsh
-    ../modules/programs/git
-    ../modules/programs/fzf
+    ../../modules/programs/git
+    ../../modules/programs/fzf
   ];
 
   home.packages = with pkgs; [

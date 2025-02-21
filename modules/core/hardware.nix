@@ -11,8 +11,7 @@
       ];
     };
     bluetooth.enable = true;
-    pulseaudio.enable = false;
- 	  opengl.enable = true;
+ 	  # graphics.enable = true;
     nvidia.modesetting.enable = true;
     #Most wayland compositors need this
     enableRedistributableFirmware = true;

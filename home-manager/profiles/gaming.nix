@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ../modules/programs/gaming
+    ../../modules/programs/gaming
   ];
 
   home.packages = with pkgs; [

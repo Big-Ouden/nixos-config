@@ -23,6 +23,7 @@
     tailscale
     tree
     home-manager
+    vim
   ];
 
 

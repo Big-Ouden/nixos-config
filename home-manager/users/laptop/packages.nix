@@ -10,7 +10,7 @@
     ani-cli
     binsider
     # bitwise                           # cli tool for bit / hex manipulation
-    # caligula                          # User-friendly, lightweight TUI for disk imaging
+    caligula                          # User-friendly, lightweight TUI for disk imaging
     # dconf-editor
     docfd                             # TUI multiline fuzzy document finder
     eza                               # ls replacement
@@ -20,7 +20,7 @@
     ffmpeg
     file                              # Show file information
     gtt                               # google translate TUI
-    # gifsicle                          # gif utility
+    gifsicle                          # gif utility
     gtrash                            # rm replacement, put deleted files in system trash
     hexdump
     htop
@@ -33,8 +33,8 @@
     mpv                               # video player
     ncdu                              # disk space
     nitch                             # systhem fetch util
-    # nixd                              # nix lsp
-    # nixfmt-rfc-style                  # nix formatter
+    nixd                              # nix lsp
+    nixfmt-rfc-style                  # nix formatter
     openssl
     onefetch                          # fetch utility for git repo
     pamixer                           # pulseaudio command line mixer
@@ -45,7 +45,7 @@
     shfmt                             # bash formatter
     # swappy                            # snapshot editing tool
     # tdf                               # cli pdf viewer
-    # treefmt2                          # project formatter
+    treefmt2                          # project formatter
     tldr
     todo                              # cli todo list
     toipe                             # typing test in the terminal

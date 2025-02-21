@@ -7,7 +7,6 @@
   pkgs,
   ...
 }: {
-  # You can import other home-manager modules here
   imports = [
     # If you want to use home-manager modules from other flakes (such as nix-colors):
     # inputs.nix-colors.homeManagerModule
@@ -15,42 +14,12 @@
     # You can also split up your configuration and import pieces of it here:
     #./modules/neovim/neovim.nix
 
-    ./modules/nixvim            # text editor
-    ./modules/hypr              # window manager
-    ./modules/firefox           # browser
-    ./modules/fzf               # fuzzy finder
-    ./modules/zsh               # shell
-    ./modules/kitty             # terminal emulator
-    ./modules/waybar            # bar
-    ./modules/gtk               # gtk theme
-   ./modules/viewnior           # image viewer
-   ./modules/zathura            # pdf viewer
-    ./modules/rofi              # launcher
-    ./modules/swayosd           # brightness / volume wiget
-    ./modules/script            # personal scripts
-    # ./modules/obsidian          #  obsidian
-    ./modules/git               #  git
-    ./modules/cava              #  audio visualiser
-    ./modules/audacious         #  music player
-    ./modules/bat               #  better cat command
-    ./modules/btop              #  ressources monitor
-    ./modules/discord           #  discord with gruvbox
-    # ./modules/gaming            #  packages related to gaming
-    ./modules/lazygit           #  lazygit modules
-    ./modules/nemo              #  file manager
-    ./modules/yazi             #  terminal file manager
-    ./modules/swaylock          #  lockscreen
-    ./modules/vscodium          #  vscode fork
-    ./modules/swaync            #  notification daemon
-    ./modules/waypaper          #  GUI wallpaper picker
-    ./modules/xdg-mimes         #  xdg config
-    ./modules/zen-browser       #  browser
-   ./modules/tmux               # terminal multiplexer
-   ./modules/zoxide             # better cd command
 
-
-
-    ./packages.nix # other packages
+    ../profiles/base.nix
+    ../profiles/dev.nix
+    ../profiles/misc.nix
+    ../profiles/rice.nix
+    ./packages.nix # other packages just for this config
 
    inputs.nix-colors.homeManagerModules.default
    ./features/mako.nix
@@ -93,7 +62,7 @@
   #   homeDirectory = "/home/simon";
   #   sessionVariables = {
   #   };
-  # };
+# };
 
   # Add stuff for your user as you see fit:
   # programs.neovim.enable = true;

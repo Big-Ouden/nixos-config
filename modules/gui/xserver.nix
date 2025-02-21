@@ -3,13 +3,13 @@
   services = {
     xserver = {
       enable = true;
-      xkb.layout = "fr,us";
+      xkb.layout = "fr";
     };
 
-    displayManager.autoLogin = {
-      enable = true;
-      user = "${username}";
-    };
+    # displayManager.autoLogin = {
+    #   enable = true;
+    #   user = "${username}";
+    # };
     libinput = {
       enable = true;
     };

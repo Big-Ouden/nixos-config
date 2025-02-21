@@ -77,8 +77,10 @@
         config.allowUnfree = true;
       };
       lib = nixpkgs.lib;
-      username = "simon";
-      hostname = "surtur";
+      username = "bigouden";
+      laptop_hostname = "surtur";
+      desktop_hostname = "freya";
+      vm_hostname = "vm";
   in {
 
     # NixOS configuration entrypoint
@@ -91,7 +93,7 @@
             
             ];
           specialArgs = {
-            host = "desktop";
+            host = "${desktop_hostname}";
             inherit self inputs username;
           };
         };
@@ -103,7 +105,7 @@
             
             ];
           specialArgs = {
-            host = "laptop";
+            host = "${laptop_hostname}";
             inherit self inputs username;
           };
         };
@@ -114,7 +116,7 @@
             
             ];
           specialArgs = {
-            host = "vm";
+            host = "${vm_hostname}";
             inherit self inputs username;
           };
         };
@@ -133,14 +135,30 @@
 
     # Standalone home-manager configuration entrypoint
     # Available through 'home-manager --flake .#your-username@your-hostname'
-    # homeConfigurations = {
-    #   "simon@surtur" = home-manager.lib.homeManagerConfiguration {
-    #     pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
+    homeConfigurations = {
+      "${username}@${laptop_hostname}" = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
 
-    #     extraSpecialArgs = {inherit inputs outputs system;};
-    #     # > Our main home-manager configuration file <
-    #     modules = [./home-manager/home.nix];
-    #   };
-    # };
+        extraSpecialArgs = {inherit inputs outputs system;};
+        # > Our main home-manager configuration file <
+        modules = [./home-manager/users/laptop/home.nix];
+      };
+
+      "${username}@${desktop_hostname}" = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
+
+        extraSpecialArgs = {inherit inputs outputs system;};
+        # > Our main home-manager configuration file <
+        modules = [./home-manager/users/desktop/home.nix];
+      };
+      
+      "${username}@${vm_hostname}" = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
+
+        extraSpecialArgs = {inherit inputs outputs system;};
+        # > Our main home-manager configuration file <
+        modules = [./home-manager/users/vm/home.nix];
+      };
+    };
   };
 }

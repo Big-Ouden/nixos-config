@@ -10,12 +10,12 @@
         libvdpau-va-gl
       ];
     };
+    bluetooth.enable = true;
+    pulseaudio.enable = false;
+ 	  opengl.enable = true;
+    nvidia.modesetting.enable = true;
+    #Most wayland compositors need this
+    enableRedistributableFirmware = true;
   };
-  hardware.enableRedistributableFirmware = true;
- 	opengl.enable = true;
-  #Most wayland compositors need this
-  nvidia.modesetting.enable = true;
-  bluetooth.enable = true;
-  pulseaudio.enable = false;
 
 }

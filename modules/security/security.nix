@@ -1,7 +1,7 @@
 { ... }:
 {
   security.rtkit.enable = true;
-  security.sudo.enable = {
+  security.sudo = {
     enable = true;
     wheelNeedsPassword = true;
   };

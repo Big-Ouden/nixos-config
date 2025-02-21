@@ -4,17 +4,63 @@ This project provides a **modular NixOS configuration**, integrating Home Manage
 
 ## 📌 **Features**
 ✔️ **Multi-host NixOS configuration**:
-   - 💻 Laptop  
-   - 🖥️ Desktop  
-   - 🏠 Virtual Machine (VM)  
+   - 💻 Laptop (`surtur`)  
+   - 🖥️ Desktop (`freya`)  
+   - 🏠 Virtual Machine (`vm`)  
 
 ✔️ **Home Manager** for per-user environment management.  
 ✔️ **Hyprland** as a lightweight Wayland window manager (optional).  
 ✔️ **Essential applications & services** pre-configured for each machine.  
 ✔️ **Flatpak support** for proprietary applications.  
 ✔️ **Modular & scalable architecture** with structured dependencies.  
+✔️ **Secure and optimized Nix garbage collection & logging**.  
 
 ---
+
+
+# 📸 Screenshots  
+
+Here are some previews of the **desktop environment, terminal setup, and other customizations** in this NixOS configuration.  
+
+📌 **Click on a section below to expand/collapse the images.**  
+
+---
+
+<details>
+  <summary>🌿 Desktop Overview</summary>
+  
+  ![Desktop Environment](screenshots/desktop.png)
+</details>
+
+<details>
+  <summary>📂 File Manager (Nemo)</summary>
+  
+  ![File Manager](screenshots/file-manager.png)
+</details>
+
+<details>
+  <summary>🔲 Tiling Window Manager (Hyprland)</summary>
+  
+  ![Hyprland Setup](screenshots/hyprland.png)
+</details>
+
+<details>
+  <summary>🖥️ System Monitor (btop)</summary>
+  
+  ![btop Monitoring](screenshots/btop.png)
+</details>
+
+<details>
+  <summary>🔧 Terminal Configuration</summary>
+  
+  ![Terminal Config](screenshots/terminal.png)
+</details>
+
+---
+
+
+---
+
 
 ## 🛠️ **Dependencies**
 Before using this project, ensure **Nix is installed with flakes support**:
@@ -131,7 +177,7 @@ This project is structured into **modular components**:
 | `nixos-rebuild switch --flake .#host` | System (root) | Kernel, services, system-wide apps |
 | `home-manager switch --flake .#user@host` | User (non-root) | UI, personal apps, shell config |
 
----
+
 
 ## 📜 **License**
 This project is licensed under **MIT**.  

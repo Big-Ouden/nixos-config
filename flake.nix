@@ -86,6 +86,13 @@
     # NixOS configuration entrypoint
     # Available through 'nixos-rebuild --flake .#your-hostname'
     nixosConfigurations = {
+        default = nixpkgs.lib.nixosSystem {
+          inherit system;
+          modules = [
+            ./hosts/laptop
+          ];
+        };
+
         desktop = nixpkgs.lib.nixosSystem {
           inherit system;
           modules = [ 

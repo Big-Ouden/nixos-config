@@ -113,6 +113,7 @@ home-manager switch --flake .#simon@laptop
 Changes to one **do not** affect the other.
 
 </details>
+
 ---
 
 <details>
@@ -136,8 +137,10 @@ For example, to install on a **laptop** for user **simon**:
 
 This script:
 ✔️ **Applies the system configuration (`nixos-rebuild`)**  
-✔️ **Applies the user configuration (`home-manager switch`)**  
+✔️ **Applies the user configuration (`home-manager switch`)** 
+
 </details>
+
 ---
 
 ## 📦 **Applications & Services**

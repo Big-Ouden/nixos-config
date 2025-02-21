@@ -78,9 +78,11 @@ cd nixos-config
 ---
 <details>
 <summary>
-Building and deploying
-</summary>
+
 ## 🔧 **Building & Deploying the Configuration**
+
+</summary>
+
 ### **1️⃣ Applying the NixOS System Configuration (Host)**
 To rebuild your **entire system (host)**, replacing `laptop` with `desktop` or `vm` as needed:
 
@@ -115,9 +117,10 @@ Changes to one **do not** affect the other.
 
 <details>
 <summary>
-Automatic install
-</summary>
+
 ## 🔧 **Automatic Installation Script**
+
+</summary>
 Instead of manually running the above commands, you can use the **provided installation script**:
 
 ```sh

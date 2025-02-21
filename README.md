@@ -22,9 +22,7 @@ This project provides a **modular NixOS configuration**, integrating Home Manage
 
 Here are some previews of the **desktop environment, terminal setup, and other customizations** in this NixOS configuration.  
 
-📌 **Click on a section below to expand/collapse the images.**  
 
----
 
 <details>
   <summary>🌿 Desktop Overview</summary>
@@ -56,7 +54,6 @@ Here are some previews of the **desktop environment, terminal setup, and other c
   ![Terminal Config](screenshots/terminal.png)
 </details>
 
----
 
 
 ---

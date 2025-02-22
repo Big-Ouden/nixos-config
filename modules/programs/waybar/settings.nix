@@ -72,13 +72,13 @@ in
         "10" = "X";
         sort-by-number = true;
       };
-      persistent-workspaces = {
-        "1" = [ ];
-        "2" = [ ];
-        "3" = [ ];
-        "4" = [ ];
-        "5" = [ ];
-      };
+      # persistent-workspaces = {
+      #   "1" = [ ];
+      #   "2" = [ ];
+      #   "3" = [ ];
+      #   "4" = [ ];
+      #   "5" = [ ];
+      # };
     };
     cpu = {
       format = "<span foreground='${green}'> </span> {usage}%";

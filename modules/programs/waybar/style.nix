@@ -4,17 +4,17 @@ let
     font = "Jetbrains Mono";
     font_size = "12px";
     font_weight = "bold";
-    text_color = "#FBF1C7";
-    background_0 = "#1D2021";
-    background_1 = "#282828";
-    border_color = "#928374";
-    red = "#CC241D";
-    green = "#98971A";
-    yellow = "#FABD2F";
-    blue = "#458588";
-    magenta = "#B16286";
-    cyan = "#689D6A";
-    orange = "#D65D0E";
+    text_color = " #FBF1C7";
+    background_0 = " #1D2021";
+    background_1 = " #282828";
+    border_color = " #928374";
+    red = " #CC241D";
+    green = " #98971A";
+    yellow = " #FABD2F";
+    blue = " #458588";
+    magenta = " #B16286";
+    cyan = " #689D6A";
+    orange = " #D65D0E";
     orange_bright = "#FE8019";
     opacity = "1";
     indicator_height = "2px";
@@ -60,6 +60,7 @@ in
       color: ${text_color};
     }
     #workspaces button.active {
+
       color: ${orange_bright};
     }
 
@@ -72,6 +73,7 @@ in
       color: ${text_color};
     }
     #tray menu {
+      color: ${text_color};
       background: ${background_1};
       border: 1px solid ${border_color};
       padding: 8px;
@@ -98,7 +100,7 @@ in
     }
 
     #custom-launcher {
-      font-size: 20px;
+      font-size: 12px;
       color: ${text_color};
       font-weight: bold;
       margin-left: 15px;

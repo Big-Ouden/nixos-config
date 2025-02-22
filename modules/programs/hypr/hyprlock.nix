@@ -8,7 +8,7 @@ in
     # BACKGROUND
     background {
       monitor =
-      path = ${/home/bigouden/git/gruvbox-wallpapers/wallpapers/mix/titlwinzbst81.jpg}
+      path = ${"$HOME/git/gruvbox-wallpapers/wallpapers/mix/titlwinzbst81.jpg"}
       blur_passes = 2
       contrast = 0.8916
       brightness = 0.8172
@@ -34,7 +34,7 @@ in
       font_size = 50
       font_family = JetBrains Mono
       shadow_passes = 3
-      position = 0, ${if (host == "laptop") then "-25" else "-150"}
+      position = 0, ${if (host == "surtur") then "-25" else "-150"}
       halign = center
       valign = top
     }
@@ -47,7 +47,7 @@ in
       font_size = 12
       font_family = JetBrains Mono
       shadow_passes = 3
-      position = 0, ${if (host == "laptop") then "-225" else "-350"}
+      position = 0, ${if (host == "surtur") then "-225" else "-350"}
       halign = center
       valign = top
     }
@@ -63,7 +63,7 @@ in
       border_color = rgba(255, 255, 255, 0)
       rotate = 0
 
-      position = 0, ${if (host == "laptop") then "120" else "270"}
+      position = 0, ${if (host == "surtur") then "120" else "270"}
       halign = center
       valign = bottom
     }
@@ -75,7 +75,7 @@ in
       color = rgba(235, 219, 178, 1)
       font_size = 12
       font_family = JetBrains Mono
-      position = 0, ${if (host == "laptop") then "131" else "281"}
+      position = 0, ${if (host == "surtur") then "131" else "281"}
       halign = center
       valign = bottom
     }
@@ -98,7 +98,7 @@ in
       fade_on_empty = false
       placeholder_text = <i><span foreground="##fbf1c7">Enter Password</span></i>
       hide_input = false
-      position = 0, ${if (host == "laptop") then "50" else "200"}
+      position = 0, ${if (host == "surtur") then "50" else "200"}
       halign = center
       valign = bottom
     }

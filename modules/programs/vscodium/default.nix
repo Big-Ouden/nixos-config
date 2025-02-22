@@ -10,9 +10,9 @@ let
   };
 in
 {
-  home.file = {
-    ".config/./VSCodium/User/settings.json".source = ./settings.json;
-  };
+  # home.file = {
+  #   ".config/./VSCodium/User/settings.json".source = ./settings.json;
+  # };
 
   programs.vscode = {
     enable = true;
@@ -53,8 +53,7 @@ in
       # prettier
       esbenp.prettier-vscode
       # wakatime
-      vscode-wakatime
-
+      wakatime.vscode-wakatime
 
       # Color theme
       jdinhlife.gruvbox

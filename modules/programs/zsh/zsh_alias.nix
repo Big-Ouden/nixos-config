@@ -22,6 +22,7 @@
       space = "ncdu";
       man = "BAT_THEME='default' batman";
 
+      ssh = "XTERM=xterm-256color kitten ssh";
 
       l = "eza --icons  -a --group-directories-first "; # EZA_ICON_SPACING=2
       ls = "eza --icons   --group-directories-first "; # EZA_ICON_SPACING=2
@@ -40,7 +41,6 @@
       # python
       piv = "python -m venv .venv";
       psv = "source .venv/bin/activate";
-
 
       # git TODO
     };

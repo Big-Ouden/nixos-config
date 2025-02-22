@@ -6,16 +6,24 @@ wallpapers_folder="$HOME/Pictures/wallpapers/others"
 current_wallpaper=$(readlink "$wallpaper_path/wallpaper" 2> /dev/null)
 current_wallpaper_name="$(basename "$current_wallpaper")"
 
-wallpaper_list=($(ls "$wallpapers_folder"))
+# Création de la liste de wallpapers avec find
+wallpaper_list=($(find -L "$wallpapers_folder" -maxdepth 3 -type f 2>/dev/null))
 wallpaper_count=${#wallpaper_list[@]}
 
-while true; do
-    wallpaper_name="${wallpaper_list[RANDOM % wallpaper_count]}"
+# Vérification qu'on a trouvé au moins un wallpaper
+if [ $wallpaper_count -eq 0 ]; then
+    echo "Aucun wallpaper trouvé"
+    exit 1
+fi
 
-    if [[ "$wallpaper_name" != "$current_wallpaper_name" ]]; then
+while true; do
+    selected_wallpaper="${wallpaper_list[RANDOM % wallpaper_count]}"
+    selected_wallpaper_name="$(basename "$selected_wallpaper")"
+
+    if [[ "$selected_wallpaper_name" != "$current_wallpaper_name" ]]; then
         break
     fi
 done
 
-ln -sf "$wallpapers_folder/$wallpaper_name" "$wallpaper_path/wallpaper"
+ln -sf "$selected_wallpaper" "$wallpaper_path/wallpaper"
 wall-change "$wallpaper_path/wallpaper" &

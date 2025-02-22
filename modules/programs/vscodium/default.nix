@@ -1,22 +1,18 @@
 { pkgs, ... }:
 let
-  jonathanharty.gruvbox-material-icon-theme =
-    pkgs.vscode-utils.buildVscodeMarketplaceExtension
-      {
-        mktplcRef = {
-          name = "gruvbox-material-icon-theme";
-          publisher = "JonathanHarty";
-          version = "1.1.5";
-          hash = "sha256-86UWUuWKT6adx4hw4OJw3cSZxWZKLH4uLTO+Ssg75gY=";
-        };
-      };
+  jonathanharty.gruvbox-material-icon-theme = pkgs.vscode-utils.buildVscodeMarketplaceExtension {
+    mktplcRef = {
+      name = "gruvbox-material-icon-theme";
+      publisher = "JonathanHarty";
+      version = "1.1.5";
+      hash = "sha256-86UWUuWKT6adx4hw4OJw3cSZxWZKLH4uLTO+Ssg75gY=";
+    };
+  };
 in
 {
-    home.file = {
-      ".config/./VSCodium/User/settings.json".source=./settings.json;
-    };
-
-
+  home.file = {
+    ".config/./VSCodium/User/settings.json".source = ./settings.json;
+  };
 
   programs.vscode = {
     enable = true;
@@ -34,11 +30,37 @@ in
       ocamllabs.ocaml-platform
       # Zig
       ziglang.vscode-zig
+      # mardown all in one
+      yzhang.markdown-all-in-one
+      # yaml
+      redhat.vscode-yaml
+      # makefile
+      ms-vscode.makefile-tools
+      # copilot
+      github.copilot
+      # comments
+      aaron-bond.better-comments
+      # live server
+      ms-vscode.live-server
+      # code spell checker
+      streetsidesoftware.code-spell-checker
+      # git history
+      donjayamanne.githistory
+      # git lens
+      eamodio.gitlens
+      # todo tree
+      gruntfuggly.todo-tree
+      # prettier
+      esbenp.prettier-vscode
+      # wakatime
+      vscode-wakatime
+
 
       # Color theme
       jdinhlife.gruvbox
       # sainnhe.gruvbox-material
       jonathanharty.gruvbox-material-icon-theme
+
     ];
     # userSettings = {
     #   "update.mode" = "none";

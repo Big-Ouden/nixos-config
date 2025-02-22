@@ -16,6 +16,7 @@
     ../../modules/programs/zoxide
     ../../modules/programs/bat
     ../../modules/programs/nemo
+    ../../modules/programs/script
 
 
 

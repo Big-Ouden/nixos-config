@@ -11,6 +11,7 @@
     ../../modules/programs/btop
     ../../modules/programs/lazygit
     ../../modules/programs/yazi
+    ../../modules/programs/discord
   ];
 
 

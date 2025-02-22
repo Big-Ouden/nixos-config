@@ -1,6 +1,7 @@
-{ config
-, pkgs
-, ...
+{
+  config,
+  pkgs,
+  ...
 }:
 
 with config.colorScheme.palette;
@@ -8,7 +9,7 @@ with config.colorScheme.palette;
   programs.zathura = {
     enable = true;
     options = {
-      selection-clipboard="clipboard";
+      selection-clipboard = "clipboard";
       incremental-search = "true";
       recolor = "true";
       default-bg = "#${base00}";
@@ -28,8 +29,8 @@ with config.colorScheme.palette;
       adjust-open = "width";
       smooth-scroll = "true";
       statusbar-home-tilde = "true";
-      statusbar-h-padding = "50";
-      statusbar-v-padding = "50";
+      statusbar-h-padding = "10";
+      statusbar-v-padding = "10";
       guioptions = "s";
       font = "Input      10";
     };

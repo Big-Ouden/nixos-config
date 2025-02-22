@@ -19,12 +19,12 @@
   xdg.configFile."rofi/config.rasi".text = ''
     configuration{
       modi: "run,drun,window";
-      lines: 5;
+      lines: 1;
       cycle: false;
-      font: "JetBrainsMono NF Bold 15";
+      font: "JetBrainsMono NF Bold 10";
       show-icons: true;
       icon-theme: "Papirus-dark";
-      terminal: "ghostty";
+      terminal: "kitty";
       drun-display-format: "{icon} {name}";
       location: 0;
       disable-history: true;
@@ -32,7 +32,7 @@
       display-drun: " Apps ";
       display-run: " Run ";
       display-window: " Window ";
-      /* display-Network: " Network"; */
+      display-Network: " Network"; 
       sidebar-mode: true;
       sorting-method: "fzf";
     }
@@ -101,7 +101,7 @@
     }
 
     element-icon {
-      size: 28px;
+      size: 12px;
     }
 
     element selected {

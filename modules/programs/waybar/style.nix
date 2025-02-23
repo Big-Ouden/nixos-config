@@ -39,7 +39,6 @@ in
     }
 
     tooltip {
-      background: ${background_1};
       border: 1px solid ${border_color};
     }
     tooltip label {

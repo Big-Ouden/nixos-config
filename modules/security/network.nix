@@ -14,12 +14,15 @@
         22
         80
         443
+        8384 # syncthing port
         # 59010
         # 59011
       ];
       allowedUDPPorts = [
         # 59010
         # 59011
+        8384 # syncthing port
+
       ];
     };
   };

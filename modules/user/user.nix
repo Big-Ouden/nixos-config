@@ -21,7 +21,7 @@
   #      home.homeDirectory = "/home/${username}";
   #      home.stateVersion = "24.11";
   #      programs.home-manager.enable = true;
-  #    }; 
+  #    };
   #  };
   users.users.${username} = {
     isNormalUser = true;
@@ -30,6 +30,7 @@
     extraGroups = [
       "networkmanager"
       "wheel"
+      "docker"
     ];
     shell = pkgs.zsh;
     packages = with pkgs;[

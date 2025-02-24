@@ -2,8 +2,8 @@
   config,
   pkgs,
   inputs,
-  username, 
-  host, 
+  username,
+  host,
   ...
 }:
 {
@@ -15,8 +15,10 @@
     ./pipewire.nix
     # Include flatpak config
     ./flatpak.nix
-    # Include garbage collecting config
+    # Include garbage-collecting config
     ./garbage-collecting.nix
+    # Include virualisation config
+    ./virtualization.nix
 
 
   ];

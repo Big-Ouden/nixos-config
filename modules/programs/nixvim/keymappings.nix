@@ -270,7 +270,7 @@
       #  Toggle line wrapping
       {
         mode = [ "n" ] ;
-        key = "'<leader>lw";
+        key = "<leader>lw";
         action = "<cmd>set wrap!<CR>";
         options = {
           silent = true;

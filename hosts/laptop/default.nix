@@ -8,10 +8,7 @@
   imports = [
     ./hardware-configuration.nix
     ../../modules/core
-    ../../modules/services/flatpak.nix
-    ../../modules/services/garbage-collecting.nix
-    ../../modules/services/nh.nix
-    ../../modules/services/pipewire.nix
+    ../../modules/services
     ../../modules/security
     ../../modules/gui
     ../../modules/user

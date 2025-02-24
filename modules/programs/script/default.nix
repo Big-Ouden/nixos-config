@@ -15,6 +15,7 @@ let
   lofi = pkgs.writeScriptBin "lofi" (builtins.readFile ./scripts/lofi.sh);
   itv = pkgs.writeScriptBin "itv" (builtins.readFile ./scripts/itv.sh);
   itv-video = pkgs.writeScriptBin "itv-video" (builtins.readFile ./scripts/itv-video.sh);
+  wago = pkgs.writeScriptBin "itv-video" (builtins.readFile ./scripts/wago.sh);
 
   toggle_blur = pkgs.writeScriptBin "toggle_blur" (
     builtins.readFile ./scripts/toggle_blur.sh
@@ -74,6 +75,7 @@ in
     lofi
     itv
     itv-video
+   wago
 
     toggle_blur
     toggle_oppacity

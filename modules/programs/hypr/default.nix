@@ -34,6 +34,7 @@
     cliphist
     wf-recorder
     glib
+    xclip
     direnv
   ];
 

@@ -22,7 +22,7 @@
       space = "ncdu";
       man = "BAT_THEME='default' batman";
 
-      ssh = "XTERM=xterm-256color kitten ssh";
+      ssh = "TERM=xterm-256color  ssh";
 
       l = "eza --icons  -a --group-directories-first "; # EZA_ICON_SPACING=2
       ls = "eza --icons   --group-directories-first "; # EZA_ICON_SPACING=2

@@ -27,6 +27,7 @@
 
           extensions = with inputs.firefox-addons.packages."x86_64-linux"; [
             bitwarden
+            linkwarden
             ublock-origin
             sponsorblock
             darkreader

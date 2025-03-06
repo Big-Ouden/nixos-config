@@ -7,6 +7,7 @@
     ../../modules/programs/zen-browser
     ../../modules/programs/discord
     ../../modules/programs/tmux
+    ../../modules/programs/firefox
   ];
 
   home.packages = with pkgs; [
@@ -19,6 +20,7 @@
     docker        # Containerized development
     podman        # Alternative to Docker
     valgrind      # c memory analyzer
+    pnpm
 
   ];
 }

@@ -28,13 +28,14 @@ in
 
     # Time
     label {
-      monitor = 
+      monitor =
       text = cmd[update:1000] echo "$(date +"%k:%M")"
       color = rgba(235, 219, 178, .9)
       font_size = 50
       font_family = JetBrains Mono
       shadow_passes = 3
-      position = 0, ${if (host == "surtur") then "-25" else "-150"}
+      # position = 0, ${if (host == "surtur") then "-25" else "-150"}
+      position = 0
       halign = center
       valign = top
     }

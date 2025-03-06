@@ -16,6 +16,10 @@
         tmuxPlugins.open
         tmuxPlugins.online-status
         tmuxPlugins.tmux-thumbs
+        tmuxPlugins.gruvbox
+        tmuxPlugins.jump
+        tmuxPlugins.tmux-fzf
+        tmuxPlugins.tmux-powerline
 
 
       ];

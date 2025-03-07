@@ -6,7 +6,7 @@ let
   };
 in
 {
-  home.sessionVariables.GTK_THEME = "gruvbox-gtk-theme";
+  home.sessionVariables.GTK_THEME = "Gruvbox";
   fonts.fontconfig.enable = true;
   home.packages = with pkgs; [
     nerd-fonts.jetbrains-mono
@@ -28,7 +28,7 @@ in
       size = 12;
     };
     theme = {
-      name = "gruvbox-gtk-theme";
+      name = "Gruvbox";
       package = pkgs.gruvbox-gtk-theme;
     };
     iconTheme = {

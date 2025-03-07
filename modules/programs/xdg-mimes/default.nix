@@ -2,9 +2,9 @@
 with lib;
 let
   defaultApps = {
-    browser = [ "zen.desktop" ];
+    browser = [ "firefox.desktop" ];
     text = [ "org.gnome.TextEditor.desktop" ];
-    image = [ "viewnior.desktop" ];
+    image = [ "imv.desktop" ];
     audio = [ "mpv.desktop" ];
     video = [ "mpv.desktop" ];
     directory = [ "nemo.desktop" ];

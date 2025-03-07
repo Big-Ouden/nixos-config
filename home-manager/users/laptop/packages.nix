@@ -98,6 +98,7 @@
     obsidian
     steam
     baobab
+    overskride
 
     # C / C++
     gcc

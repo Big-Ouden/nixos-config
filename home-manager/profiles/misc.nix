@@ -13,7 +13,7 @@
     ../../modules/programs/yazi
     ../../modules/programs/discord
     ../../modules/programs/syncthings
-    ../../modules/programs/overskride
+    # ../../modules/programs/overskride
     ../../modules/programs/helix
   ];
 

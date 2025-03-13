@@ -2,8 +2,8 @@
   config,
   pkgs,
   inputs,
-  username, 
-  host, 
+  username,
+  host,
   ...
 }:
 {

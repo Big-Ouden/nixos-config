@@ -11,6 +11,8 @@
       cmp-nvim-lsp-signature-help.enable = true;
       cmp-dictionary.enable = true;
 
+
+
       lspkind = {
         enable = true;
 
@@ -54,6 +56,7 @@
               option.get_bufnrs.__raw = "vim.api.nvim_list_bufs";
             }
             {name = "neorg";}
+            # {name = "copilot";}
           ];
         };
       };

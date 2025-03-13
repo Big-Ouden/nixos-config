@@ -27,7 +27,7 @@
     ./indent-o-matic.nix
     ./cursorline.nix
     # ./copilot-vim.nix
-    ./copilot-cmp.nix
+    # ./copilot-cmp.nix
     ./presence.nix
     ./csvview.nix
     ./typst-vim.nix

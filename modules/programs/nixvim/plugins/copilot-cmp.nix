@@ -1,21 +1,26 @@
 {
-  programs.nixvim.plugins.copilot-cmp = {
+  programs.nixvim.plugins.blink-cmp = {
     enable = true;
-  };
-  programs.nixvim.plugins.copilot-lua = {
-    enable = true;
-    suggestion = {
-      enabled = false;
+    settings.sources.providers = {
+      copilot = {
+        async = true;
+        module = "blink-copilot";
+        name = "copilot";
+        score_offset = 100;
+        # Optional configurations
+        opts = {
+          max_completions = 3;
+          max_attempts = 4;
+          kind = "Copilot";
+          debounce = 750;
+          auto_refresh = {
+            backward = true;
+            forward = true;
+          };
+        };
+      };
     };
-    panel = {
-      enabled = false;
-    };
-  };
+};
 
-  extraConfigLua = ''
-    require("copilot").setup({
-      suggestion = { enabled = false },
-      panel = { enabled = false },
-    })
-  '';
+
 }

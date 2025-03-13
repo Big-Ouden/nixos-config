@@ -14,6 +14,7 @@
     rsync       # File transfer utility
     jq          # JSON processor
     tmux        # Terminal multiplexer
+    # pinentry-tty
 
   ];
 }

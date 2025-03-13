@@ -1,7 +1,7 @@
-{ 
-  pkgs, 
-  config, 
-  host, 
+{
+  pkgs,
+  config,
+  host,
   ...
 }:
 {

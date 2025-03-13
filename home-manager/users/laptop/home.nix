@@ -21,6 +21,7 @@
     ../../profiles/misc.nix
     ../../profiles/rice.nix
     ./packages.nix # other packages just for this config
+    ../../../modules/services/kanshi.nix
 
    inputs.nix-colors.homeManagerModules.default
    ./features/mako.nix

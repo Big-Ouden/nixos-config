@@ -99,6 +99,7 @@
     steam
     baobab
     overskride
+    openvpn
 
     # C / C++
     gcc

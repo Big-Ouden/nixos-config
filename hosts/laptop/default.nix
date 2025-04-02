@@ -12,6 +12,7 @@
     ../../modules/security
     ../../modules/gui
     ../../modules/user
+    ../../modules/gaming
   ];
 
    networking.hostName = "${host}";

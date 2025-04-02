@@ -4,6 +4,7 @@
   imports = [
     ../../modules/programs/nixvim
     ../../modules/programs/vscodium
+    # ../../modules/programs/vscode
     ../../modules/programs/zen-browser
     ../../modules/programs/discord
     ../../modules/programs/tmux

@@ -2,7 +2,7 @@
 {
   programs = {
     steam = {
-      enable = false;
+      enable = true;
 
       remotePlay.openFirewall = true;
       dedicatedServer.openFirewall = false;
@@ -12,13 +12,30 @@
       extraCompatPackages = [ pkgs.proton-ge-bin ];
     };
 
-    gamescope = {
-      enable = true;
-      capSysNice = true;
-      args = [
-        "--rt"
-        "--expose-wayland"
-      ];
-    };
+    # gamescope = {
+    #   enable = true;
+    #   capSysNice = false;
+    # };
+    # gamemode.enable = true;
   };
+  services.ananicy = {
+    enable = true;
+    package = pkgs.ananicy-cpp;
+    rulesProvider = pkgs.ananicy-cpp;
+    extraRules = [
+      {
+        "name" = "gamescope";
+        "nice" = -20;
+      }
+    ];
+  };
+  # programs.steam.enable = true;
+  # programs.steam.gamescopeSession.enable = true;
+
+  # home.packages = with pkgs; [mangohud protonup-qt lutris bottles heroic];
+
+  # environment.systemPackages = [
+  #   pkgs.gamescope
+  # ];
+
 }

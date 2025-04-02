@@ -20,6 +20,7 @@
     ../../profiles/dev.nix
     ../../profiles/misc.nix
     ../../profiles/rice.nix
+    # ../../profiles/gaming.nix
     ./packages.nix # other packages just for this config
     ../../../modules/services/kanshi.nix
 

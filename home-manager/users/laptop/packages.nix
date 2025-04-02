@@ -96,10 +96,12 @@
     # wineWowPackages.wayland
     # zenity
     obsidian
-    steam
+    # steam
     baobab
     overskride
     openvpn
+    termius
+    # scilab-bin
 
     # C / C++
     gcc
@@ -113,6 +115,7 @@
     # Python
     python3
     python312Packages.ipython
+    python312Packages.pip
 
     inputs.alejandra.defaultPackage.${system}
   ]);

@@ -19,6 +19,7 @@
     ./garbage-collecting.nix
     # Include virualisation config
     ./virtualization.nix
+    ./mariadb.nix
 
 
   ];

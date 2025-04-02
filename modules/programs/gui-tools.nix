@@ -1,7 +1,7 @@
-{ 
-    inputs, 
-    pkgs, 
-    ... 
+{
+    inputs,
+    pkgs,
+    ...
 }:
 {
   home.packages = (with pkgs; [
@@ -23,7 +23,7 @@
     # wineWowPackages.wayland
     # zenity
     obsidian
-    steam
+    # steam
     baobab
 
     inputs.alejandra.defaultPackage.${system}

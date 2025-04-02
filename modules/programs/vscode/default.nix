@@ -16,50 +16,50 @@ in
 
   programs.vscode = {
     enable = true;
-    # package = pkgs.vscodium;
-    profiles.default = {
-      extensions = with pkgs.vscode-extensions; [
-        # nix language
-        jnoortheen.nix-ide
-        # nix-shell suport
-        arrterian.nix-env-selector
-        # python
-        ms-python.python
-        # C/C++
-        ms-vscode.cpptools
-        # OCaml
-        ocamllabs.ocaml-platform
-        # Zig
-        ziglang.vscode-zig
-        # mardown all in one
-        yzhang.markdown-all-in-one
-        # yaml
-        redhat.vscode-yaml
-        # makefile
-        ms-vscode.makefile-tools
-        # copilot
-        github.copilot
-        # comments
-        aaron-bond.better-comments
-        # live server
-        ms-vscode.live-server
-        # code spell checker
-        streetsidesoftware.code-spell-checker
-        # git history
-        donjayamanne.githistory
-        # git lens
-        eamodio.gitlens
-        # todo tree
-        gruntfuggly.todo-tree
-        # prettier
-        esbenp.prettier-vscode
-        # wakatime
-        wakatime.vscode-wakatime
+    package = pkgs.vscodium;
+    extensions = with pkgs.vscode-extensions; [
+      # nix language
+      jnoortheen.nix-ide
+      # nix-shell suport
+      arrterian.nix-env-selector
+      # python
+      ms-python.python
+      # C/C++
+      ms-vscode.cpptools
+      # OCaml
+      ocamllabs.ocaml-platform
+      # Zig
+      ziglang.vscode-zig
+      # mardown all in one
+      yzhang.markdown-all-in-one
+      # yaml
+      redhat.vscode-yaml
+      # makefile
+      ms-vscode.makefile-tools
+      # copilot
+      github.copilot
+      # comments
+      aaron-bond.better-comments
+      # live server
+      ms-vscode.live-server
+      # code spell checker
+      streetsidesoftware.code-spell-checker
+      # git history
+      donjayamanne.githistory
+      # git lens
+      eamodio.gitlens
+      # todo tree
+      gruntfuggly.todo-tree
+      # prettier
+      esbenp.prettier-vscode
+      # wakatime
+      wakatime.vscode-wakatime
 
-        # Color theme
-        jdinhlife.gruvbox
-        # sainnhe.gruvbox-material
-        jonathanharty.gruvbox-material-icon-theme
+      # Color theme
+      jdinhlife.gruvbox
+      # sainnhe.gruvbox-material
+      jonathanharty.gruvbox-material-icon-theme
+
     ];
     # userSettings = {
     #   "update.mode" = "none";
@@ -149,6 +149,5 @@ in
         command = "workbench.action.files.saveFiles";
       }
     ];
-    };
   };
 }

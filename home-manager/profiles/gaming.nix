@@ -2,11 +2,11 @@
 
 {
   imports = [
-    ../../modules/programs/gaming
+    ../../modules/gaming
   ];
 
   home.packages = with pkgs; [
-    steam          # Steam client
+    # steam          # Steam client
     lutris         # Game launcher
     wine           # Windows compatibility layer
     winetricks     # Windows libraries for Wine

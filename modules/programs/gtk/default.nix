@@ -13,10 +13,10 @@ in
     nerd-fonts.fira-code
     nerd-fonts.caskaydia-cove
     nerd-fonts.symbols-only
-    twemoji-color-font
-    noto-fonts-emoji
-    fantasque-sans-mono
-    maple-mono
+    # twemoji-color-font
+    # noto-fonts-emoji
+    # fantasque-sans-mono
+    # maple-mono
     # monolisa
     # monolisa-nerd
   ];

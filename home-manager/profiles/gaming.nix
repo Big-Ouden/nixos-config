@@ -3,7 +3,7 @@
 {
   imports = [
     ../../modules/gaming
-    ../../modules/programs/moonlight-qt
+    # ../../modules/programs/moonlight-qt
   ];
 
   # home.packages = with pkgs; [

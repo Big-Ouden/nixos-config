@@ -65,6 +65,7 @@
     zola
     # zoxide
     wakatime-cli
+    moonlight-qt
 
 
     ## CLI

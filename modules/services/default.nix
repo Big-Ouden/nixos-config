@@ -20,6 +20,7 @@
     # Include virualisation config
     ./virtualization.nix
     # ./mariadb.nix
+   ./sunshine.nix
 
 
   ];
